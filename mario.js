@@ -1,5 +1,5 @@
 
-printPyramid(5);
+//PrintPyramid(4);
 
 //Whaddup World
 //save to git
@@ -14,11 +14,21 @@ printPyramid(5);
  *       #####
  *      ######
  */
-function printPyramid(height) {
-    console.log("Uh oh... the pyramid is under construction.");
-    console.log("Check back soon, our developers are hard at work as we speak!");
+//function printPyramid(height){
+    // console.log("Uh oh... the pyramid is under construction.");
+    // console.log("Check back soon, our developers are hard at work as we speak!");
 
-    // TODO
-    // print that pyramid!
-
-}
+function printPyramid(height){
+	for(var row=1; row<=height; row++){
+			var firstInnerLoopSpaceCounter = "";
+			var secondInnerLoopHashCounter = "";
+			var numberOfSpaces = height-row;
+			var numberOfHashes = height - numberOfSpaces;
+	    for(var i=numberOfSpaces; i>0; i--)
+				firstInnerLoopSpaceCounter += " ";
+ 			for(var j=0; j<=numberOfHashes; j++)
+    		secondInnerLoopHashCounter += "#";
+    	console.log(firstInnerLoopSpaceCounter + secondInnerLoopHashCounter);
+    	}
+    }
+printPyramid(5);
